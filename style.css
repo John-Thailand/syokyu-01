@@ -1,0 +1,202 @@
+html {
+  line-height: 1;
+}
+body {
+  font-family: Arial,"Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header-inner {
+  max-width: 980px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header-menu ul {
+  display: flex;
+  gap: 20px;
+}
+.header-menu-list {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.fv {
+  background-image: url("img/austin-distel-wawEfYdpkag-unsplash@2x\ 1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 551px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fv-title {
+  font-weight: bold;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.fv-desc {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.my-challenge {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-challenge-heading-title {
+  font-weight: bold;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 50px;
+}
+.post-list {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 46px;
+}
+.post-item {
+  width: 310px;
+  height: 336px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.img-area {
+  width: 310px;
+  height: 168px;
+}
+.text-area {
+  padding: 20px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-area-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+}
+.text-area-date {
+  font-size: 16px;
+  color: #333;
+}
+.more-btn {
+  width: 310px;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.more-btn a {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.just-continue {
+  width: 100%;
+  height: 455px;
+  padding-top: 60px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("img/tim-bogdanov-4uojMEdcwI8-unsplash@2x\ 1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.just-continue-heading-title {
+  font-weight: bold;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.just-continue-desc {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.contact-btn {
+  width: 210px;
+  height: 54px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #83032A;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.contact-btn a {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+footer {
+  background-color: #333;
+  padding: 31px 0 31px;
+  text-align: center;
+}
+.copyright {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+@media screen and (max-width: 871px) {
+  .feature-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .img-area figure {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .text-area {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .fv {
+    height: 380px;
+  }
+  .img-area figure {
+    width: 100%;
+    height: auto;
+  }
+  .header-menu-list a {
+    font-size: 16px;
+  }
+}

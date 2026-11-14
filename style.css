@@ -174,29 +174,26 @@ footer {
 }
 
 @media screen and (max-width: 871px) {
-  .feature-box {
+  .post-list {
     flex-direction: column;
-    text-align: center;
-  }
-  .img-area figure {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-  }
-  .text-area {
-    margin-left: 0;
+    gap: 30px;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .fv {
-    height: 380px;
+  .header-inner {
+    height: 100px;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .img-area figure {
-    width: 100%;
-    height: auto;
+  .fv-title {
+    font-size: 28px;
   }
-  .header-menu-list a {
-    font-size: 16px;
+  .my-challenge-heading-title {
+    font-size: 28px;
+  }
+  .just-continue-heading-title {
+    font-size: 28px;
   }
 }

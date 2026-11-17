@@ -1,0 +1,247 @@
+// ========================================
+// 変数定義
+// ========================================
+
+// カラー
+$color-white: #fff;
+$color-text: #333;
+$color-footer: #333;
+$color-contact: #83032a;
+
+// フォント
+$font-family-base:
+  Arial, "Helvetica Neue",
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", Meiryo, sans-serif;
+
+$font-size-sm: 16px;
+$font-size-md: 18px;
+$font-size-lg: 28px;
+$font-size-xl: 32px;
+$font-size-2xl: 36px;
+
+$font-weight-bold: 700;
+
+// レイアウト
+$container-width: 980px;
+$header-height: 80px;
+$post-width: 310px;
+
+// シャドウ
+$shadow-default: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+// ブレークポイント
+$tablet-breakpoint-width: 979px;
+$mobile-breakpoint-width: 520px;
+
+// ========================================
+// Mixin定義
+// ========================================
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// ボタン
+@mixin button-base($width, $height, $bg: $color-white) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  box-shadow: $shadow-default;
+}
+
+// 見出し
+@mixin heading($size, $color: $color-text) {
+  font-size: $size;
+  font-weight: $font-weight-bold;
+  color: $color;
+}
+
+html {
+  line-height: 1;
+}
+body {
+  font-family: $font-family-base;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header-inner {
+  max-width: $container-width;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header-menu {
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+.header-menu-list {
+  @include heading($font-size-sm);
+}
+
+.fv {
+  background-image: url("img/austin-distel-wawEfYdpkag-unsplash@2x\ 1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 551px;
+  @include flex-center(column);
+}
+.fv-title {
+  @include heading($font-size-2xl, $color-white);
+  margin-bottom: 10px;
+}
+.fv-desc {
+  @include heading($font-size-sm, $color-white);
+}
+
+.my-challenge {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 88px;
+  @include flex-column-center;
+}
+.section-title {
+  font-weight: $font-weight-bold;
+}
+.my-challenge-heading-title {
+  @include heading($font-size-xl);
+  margin-bottom: 50px;
+}
+.post-list {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 46px;
+}
+.post-item {
+  width: $post-width;
+  height: 336px;
+  background-color: $color-white;
+  box-shadow: $shadow-default;
+}
+.img-area {
+  width: 100%;
+  height: 168px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.text-area {
+  padding: 20px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-area-title {
+  @include heading($font-size-md);
+  line-height: 1.5;
+}
+.text-area-date {
+  font-size: $font-size-sm;
+  color: $color-text;
+}
+.more-btn {
+  @include button-base($post-width, 53px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    @include flex-center;
+    @include heading($font-size-md);
+  }
+}
+
+.just-continue {
+  width: 100%;
+  min-height: 455px;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: $font-size-xl;
+  background-image: url("img/tim-bogdanov-4uojMEdcwI8-unsplash@2x\ 1.jpg");
+  background-size: cover;
+  background-position: center;
+  @include flex-column-center;
+}
+.just-continue-heading-title {
+  @include heading($font-size-2xl, $color-white);
+  margin-bottom: 50px;
+}
+.just-continue-desc {
+  text-align: center;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-sm;
+  line-height: 1.75;
+  color: $color-white;
+  margin-bottom: 50px;
+}
+.contact-btn {
+  @include button-base(210px, 54px, $color-contact);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a {
+    text-align: center;
+    @include heading($font-size-sm, $color-white);
+  }
+}
+
+footer {
+  background-color: $color-footer;
+  padding: 31px 0 31px;
+  text-align: center;
+}
+.copyright {
+  @include heading($font-size-sm, $color-white);
+}
+
+@media screen and (max-width: $tablet-breakpoint-width) {
+  .post-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint-width) {
+  .header-inner {
+    height: 100px;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .fv-title {
+    font-size: clamp(22px, 5vw, $font-size-2xl);
+  }
+  .my-challenge-heading-title {
+    font-size: $font-size-lg;
+  }
+  .just-continue-heading-title {
+    font-size: $font-size-lg;
+  }
+}

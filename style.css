@@ -28,6 +28,17 @@ img {
   padding-left: 20px;
   padding-right: 20px;
 }
+@media screen and (max-width: 520px) {
+  .header__inner {
+    height: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,6 +77,11 @@ img {
   color: #fff;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 520px) {
+  .fv__title {
+    font-size: clamp(22px, 5vw, 36px);
+  }
+}
 .fv__desc {
   font-size: 16px;
   font-weight: 700;
@@ -94,6 +110,11 @@ img {
   color: #333;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 520px) {
+  .challenge__title {
+    font-size: 28px;
+  }
+}
 .challenge__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,43 +122,14 @@ img {
   gap: 25px;
   margin-bottom: 46px;
 }
-.challenge__more {
-  width: 310px;
-  height: 53px;
-  background-color: #fff;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.challenge__more a {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333;
+@media screen and (max-width: 979px) {
+  .challenge__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .post {
@@ -183,6 +175,40 @@ img {
   color: #333;
 }
 
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-weight: 700;
+}
+.button--more {
+  width: 310px;
+  height: 53px;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+}
+.button--contact {
+  width: 210px;
+  height: 54px;
+  background-color: #83032a;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
 .continue {
   width: 100%;
   min-height: 455px;
@@ -210,6 +236,11 @@ img {
   color: #fff;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 520px) {
+  .continue__title {
+    font-size: 28px;
+  }
+}
 .continue__desc {
   text-align: center;
   font-weight: 700;
@@ -217,30 +248,6 @@ img {
   line-height: 1.75;
   color: #fff;
   margin-bottom: 50px;
-}
-.continue__contact {
-  width: 210px;
-  height: 54px;
-  background-color: #83032a;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.continue__contact a {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
 }
 
 .footer {
@@ -252,34 +259,4 @@ img {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
-}
-
-@media screen and (max-width: 979px) {
-  .challenge__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 30px;
-  }
-}
-@media screen and (max-width: 520px) {
-  .header__inner {
-    height: 100px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .fv__title {
-    font-size: clamp(22px, 5vw, 36px);
-  }
-  .challenge__title {
-    font-size: 28px;
-  }
-  .continue__title {
-    font-size: 28px;
-  }
 }

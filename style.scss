@@ -88,6 +88,12 @@ img {
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
+    @media screen and (max-width: $mobile-breakpoint-width) {
+      height: 100px;
+      flex-direction: column;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   &__list {
     display: flex;
@@ -108,6 +114,9 @@ img {
   &__title {
     @include heading($font-size-2xl, $color-white);
     margin-bottom: 10px;
+    @media screen and (max-width: $mobile-breakpoint-width) {
+      font-size: clamp(22px, 5vw, $font-size-2xl);
+    }
   }
   &__desc {
     @include heading($font-size-sm, $color-white);
@@ -123,23 +132,17 @@ img {
     font-weight: $font-weight-bold;
     @include heading($font-size-xl);
     margin-bottom: 50px;
+    @media screen and (max-width: $mobile-breakpoint-width) {
+      font-size: $font-size-lg;
+    }
   }
   &__list {
     display: flex;
     gap: 25px;
     margin-bottom: 46px;
-  }
-  &__more {
-    @include button-base($post-width, 53px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    a {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      @include flex-center;
-      @include heading($font-size-md);
+    @media screen and (max-width: $tablet-breakpoint-width) {
+      flex-direction: column;
+      gap: 30px;
     }
   }
 }
@@ -174,6 +177,28 @@ img {
     color: $color-text;
   }
 }
+.button {
+  @include flex-center;
+  box-shadow: $shadow-default;
+  font-weight: $font-weight-bold;
+
+  &--more {
+    width: $post-width;
+    height: 53px;
+    background-color: $color-white;
+    color: $color-text;
+    font-size: $font-size-md;
+  }
+
+  &--contact {
+    width: 210px;
+    height: 54px;
+    background-color: $color-contact;
+    color: $color-white;
+    font-size: $font-size-sm;
+    border-radius: 5px;
+  }
+}
 
 .continue {
   width: 100%;
@@ -189,6 +214,9 @@ img {
     font-weight: $font-weight-bold;
     @include heading($font-size-2xl, $color-white);
     margin-bottom: 50px;
+    @media screen and (max-width: $mobile-breakpoint-width) {
+      font-size: $font-size-lg;
+    }
   }
   &__desc {
     text-align: center;
@@ -198,17 +226,6 @@ img {
     color: $color-white;
     margin-bottom: 50px;
   }
-  &__contact {
-    @include button-base(210px, 54px, $color-contact);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    a {
-      text-align: center;
-      @include heading($font-size-sm, $color-white);
-    }
-  }
 }
 
 .footer {
@@ -217,30 +234,5 @@ img {
   text-align: center;
   &__copyright {
     @include heading($font-size-sm, $color-white);
-  }
-}
-
-@media screen and (max-width: $tablet-breakpoint-width) {
-  .challenge__list {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
-@media screen and (max-width: $mobile-breakpoint-width) {
-  .header__inner {
-    height: 100px;
-    flex-direction: column;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .fv__title {
-    font-size: clamp(22px, 5vw, $font-size-2xl);
-  }
-  .challenge__title {
-    font-size: $font-size-lg;
-  }
-  .continue__title {
-    font-size: $font-size-lg;
   }
 }
